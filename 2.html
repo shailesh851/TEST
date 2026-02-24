@@ -7,10 +7,39 @@
     
 </head>
 <body>
-    <h1 id="hii"></h1>
+    <h1 id="hii">TEstinG</h1>
+    <button type="btn" value="inc" onclick="incdec(this)">inc</button>
+    <button type="btn" value="dec" onclick="incdec(this)">dec</button>
     <script>
-        let a={name:"shailesh"}
-        document.getElementById("hii").innerHTML=JSON.stringify(a)
+        size=32
+        function incdec(e){
+            if(e.value=="inc"){
+                cominc(size)
+            }
+            else{
+                comdec(size)
+            }
+        }
+
+        function final(aa){
+            document.getElementById("hii").style.fontSize=aa+"px"
+        }
+
+        function cominc(a){
+            
+            setInterval(()=>{
+                final(++a)
+            })
+        }
+
+        function comdec(a){
+            
+            setInterval(()=>{
+                final(--a)
+            })
+        }
+        
+        
     </script>
 </body>
 </html>
